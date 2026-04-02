@@ -1,9 +1,6 @@
-export default function CTA() {
+export default function MidCTA() {
   return (
-    <section className="cta-section" id="cta">
-      <h2>
-        Ready to Move Forward?
-      </h2>
+    <section className="mid-cta-section">
       <a
         href="https://www.linkedin.com/in/josh-andrews/"
         target="_blank"

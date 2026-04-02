@@ -1,37 +1,65 @@
+/* eslint-disable @next/next/no-img-element */
+
+// Brand logos - same as copyculture.io + additional
+const brands = [
+  { name: "Nerdwax", logo: "https://copyculture.io/Brand%20Logos/Nerdwax.png" },
+  { name: "Alveos", logo: "https://copyculture.io/Brand%20Logos/Alveos.png" },
+  { name: "3 Brothers Decking", logo: "https://copyculture.io/Brand%20Logos/3%20Brothers%20Decking.png" },
+  { name: "Habitual Herbs", logo: "https://copyculture.io/Brand%20Logos/Habitual%20Herbs.png" },
+  { name: "Funday", logo: "/logos/funday.svg" },
+  { name: "Tafari Wraps", logo: "https://copyculture.io/Brand%20Logos/Tafari%20Wraps.png" },
+  { name: "Rainfactory", logo: "/logos/rainfactory.svg" },
+  { name: "Viasox", logo: "https://ca.viasox.com/cdn/shop/files/Viasox_Logo_Real.svg?v=1718991331&width=120" },
+  { name: "Publishing Life Services", logo: "https://publishingservices.com/cdn/shop/files/PS_final_gold-2_200x.png?v=1673438297" },
+  { name: "Copy Culture", logo: "https://copyculture.io/assets/logo-final.png" },
+  { name: "Lion Marketing", logo: "/logos/lionmarketing.svg" },
+];
+
+// Duplicate 4x for seamless infinite loop
+const allLogos = Array(4).fill(brands).flat();
+
 export default function Hero() {
   return (
-    <section className="hero" id="hero">
-      <span className="hero-label animate-fade-in">Email Marketer</span>
-      <h1 className="animate-fade-in animate-fade-in-delay-1">
-        I Build Email Systems So Sharp,{" "}
-        <span className="text-gradient">They Should Come With a Disclaimer.</span>
-      </h1>
-      <p className="hero-subtitle animate-fade-in animate-fade-in-delay-2">
-        Get emails that cut deep and automations that never sleep.
-      </p>
-      <a
-        href="https://www.linkedin.com/in/joshuaandrewsmarketing/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn btn-primary animate-fade-in animate-fade-in-delay-3"
-      >
-        Increase Email Aura Now
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </a>
-      <div className="hero-stats animate-fade-in animate-fade-in-delay-4">
-        <div className="hero-stat">
-          <div className="hero-stat-value">$2.7M+</div>
-          <div className="hero-stat-label">Revenue Generated</div>
-        </div>
-        <div className="hero-stat">
-          <div className="hero-stat-value">500K+</div>
-          <div className="hero-stat-label">Subscribers Managed</div>
-        </div>
-        <div className="hero-stat">
-          <div className="hero-stat-value">100+</div>
-          <div className="hero-stat-label">Clients Served</div>
+    <section className="cx-hero" id="hero">
+      <div className="container">
+        <div className="cx-pill">LOOKING FOR AN EMAIL MARKETER?</div>
+        <h1 className="cx-hero-title">
+          I Build Email Systems So Sharp,<br />
+          <span className="cx-highlight">They Should Come With a Disclaimer.</span>
+        </h1>
+        <p className="cx-hero-subtitle">
+          <span className="hero-metric">100+ Clients</span>
+          <span className="hero-metric-divider"> | </span>
+          <span className="hero-metric">$2.7M+ Generated</span>
+          <span className="hero-metric-divider"> | </span>
+          <span className="hero-metric">500K+ Subscribers Managed</span>
+        </p>
+
+        <a
+          href="https://www.linkedin.com/in/josh-andrews/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-gradient"
+        >
+          Let&apos;s Chat
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+      </div>
+
+      {/* Trust Marquee - exact structure from copyculture.io */}
+      <div className="container" style={{ marginTop: "3.8rem" }}>
+
+        <div className="marquee" aria-label="Brands we've worked with">
+          <div className="track" role="list">
+            {allLogos.map((brand, i) => (
+              <div key={i} className="logo-item" role="listitem">
+                <img src={brand.logo} alt={brand.name} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

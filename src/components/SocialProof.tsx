@@ -1,35 +1,26 @@
 const brands = [
-  "Rainfactory",
-  "Viasox",
-  "ReelView",
-  "Native",
-  "nerdwax",
-  "Alveos",
-  "3 Brothers Decking",
-  "Habituel",
-  "Cooler Master",
-  "Publishing Life",
-  "Stile de Amor",
+  { name: "Nerdwax", logo: "https://copyculture.io/Brand%20Logos/Nerdwax.png" },
+  { name: "Alveos", logo: "https://copyculture.io/Brand%20Logos/Alveos.png" },
+  { name: "3 Brothers Decking", logo: "https://copyculture.io/Brand%20Logos/3%20Brothers%20Decking.png" },
+  { name: "Habitual Herbs", logo: "https://copyculture.io/Brand%20Logos/Habitual%20Herbs.png" },
+  { name: "Tafari Wraps", logo: "https://copyculture.io/Brand%20Logos/Tafari%20Wraps.png" },
 ];
 
 export default function SocialProof() {
-  // Duplicate array for seamless infinite scroll
-  const allBrands = [...brands, ...brands];
-
   return (
     <section className="social-proof">
       <p className="social-proof-text">
         Members of our team have contributed to projects from these companies
       </p>
-      <div className="marquee-container">
-        <div className="marquee-track">
-          {allBrands.map((brand, i) => (
-            <span key={`${brand}-${i}`}>
-              <span className="marquee-item">{brand}</span>
-              {i < allBrands.length - 1 && <span className="marquee-dot" />}
-            </span>
-          ))}
-        </div>
+      <div className="social-proof-logos">
+        {brands.map((brand) => (
+          <img
+            key={brand.name}
+            src={brand.logo}
+            alt={brand.name}
+            loading="lazy"
+          />
+        ))}
       </div>
     </section>
   );
