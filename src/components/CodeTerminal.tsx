@@ -73,7 +73,7 @@ export default function CodeTerminal() {
       if (line >= CODE_SNIPPETS[currentSnippet].lines.length) {
         if (intervalRef.current) clearInterval(intervalRef.current);
       }
-    }, 180);
+    }, 100);
   }, [currentSnippet]);
 
   useEffect(() => {
@@ -118,7 +118,7 @@ export default function CodeTerminal() {
           setCurrentSnippet((s) => (s + 1) % CODE_SNIPPETS.length);
         }
       }
-    }, 5000);
+    }, 3000);
     return () => clearInterval(cycle);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deploying, showSuccess, visibleLines, currentSnippet]);

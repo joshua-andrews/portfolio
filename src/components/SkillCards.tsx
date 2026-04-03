@@ -399,7 +399,6 @@ const skills = [
     titleJsx: <>Pretty emails are cute, but in 2026,<br />Google doesn&apos;t give a damn.</>,
     desktopParagraphs: [
       "I don't just write emails. I understand the technical infrastructure behind consistent inbox placement. Authentication, sender reputation, suppression logic, and real-time metrics aren't afterthoughts.",
-      "They're the foundation. This is what it looks like when I manage your email marketing system.",
     ],
     mobileParagraphs: [
       "I don't just write emails. I understand the technical infrastructure behind consistent inbox placement.",

@@ -27,26 +27,34 @@ export default function Hero() {
           I Build Email Systems So Sharp,<br />
           <span className="cx-highlight">They Should Come With a Disclaimer.</span>
         </h1>
-        <p className="cx-hero-subtitle">
-          <span className="hero-metric hero-stat-check">
-            <span className="hero-check-circle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </span>
-            100+ Clients
-          </span>
+        {/* Desktop: pipe-separated, no checkmarks */}
+        <p className="cx-hero-subtitle hero-stats-desktop">
+          <span className="hero-metric">100+ Clients</span>
           <span className="hero-metric-divider"> | </span>
-          <span className="hero-metric hero-stat-check">
-            <span className="hero-check-circle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            </span>
-            $2.7M+ Generated
-          </span>
+          <span className="hero-metric">$2.7M+ Generated</span>
           <span className="hero-metric-divider"> | </span>
+          <span className="hero-metric">500K+ Subscribers Managed</span>
+        </p>
+
+        {/* Mobile: circular checkmarks */}
+        <p className="cx-hero-subtitle hero-stats-mobile">
           <span className="hero-metric hero-stat-check">
             <span className="hero-check-circle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
             </span>
-            500K+ Subscribers Managed
+            <span>100+ Clients</span>
+          </span>
+          <span className="hero-metric hero-stat-check">
+            <span className="hero-check-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </span>
+            <span>$2.7M+ Generated</span>
+          </span>
+          <span className="hero-metric hero-stat-check">
+            <span className="hero-check-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </span>
+            <span>500K+ Subscribers Managed</span>
           </span>
         </p>
 
