@@ -1,4 +1,5 @@
 "use client";
+import { useRef, useEffect, useState } from "react";
 
 const reviews = [
   {
@@ -41,11 +42,36 @@ const reviews = [
 export default function WrittenTestimonials() {
   // Duplicate for infinite scroll
   const allReviews = [...reviews, ...reviews];
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Only start animation when section enters viewport
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="written-testimonials-section" id="written-reviews">
+    <section className="written-testimonials-section" id="written-reviews" ref={sectionRef}>
       <div className="written-reviews-marquee">
-        <div className="written-reviews-track">
+        <div
+          className="written-reviews-track"
+          style={{
+            animationPlayState: isVisible ? "running" : "paused",
+          }}
+        >
           {allReviews.map((review, i) => (
             <div key={i} className="written-review-card" role="listitem">
               <div className="written-review-stars">★★★★★</div>

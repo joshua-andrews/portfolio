@@ -409,7 +409,8 @@ const skills = [
   },
   {
     label: "2. Project Management",
-    title: "For the love of God, please use Asana 🙏🏾",
+    title: "",
+    titleJsx: <>For the love of God, please use Asana&nbsp;🙏🏾</>,
     desktopParagraphs: [
       "Okay I'm biased, but the point is, having a system AND operations not built in the 1940s is ideal.",
       "I create detailed projects & automations so my team moves like we're about to pull off a heist (but like, legally).",

@@ -106,16 +106,22 @@ export default function CodeTerminal() {
     return () => observer.disconnect();
   }, [startTyping]);
 
-  // Auto-cycle snippets
+  // Auto-cycle snippets + auto-deploy on mobile
   useEffect(() => {
     if (!isVisible.current) return;
     const cycle = setInterval(() => {
       if (!deploying && !showSuccess) {
-        setCurrentSnippet((s) => (s + 1) % CODE_SNIPPETS.length);
+        // Auto-deploy if typing is complete
+        if (visibleLines >= CODE_SNIPPETS[currentSnippet].lines.length) {
+          handleDeploy();
+        } else {
+          setCurrentSnippet((s) => (s + 1) % CODE_SNIPPETS.length);
+        }
       }
-    }, 6000);
+    }, 5000);
     return () => clearInterval(cycle);
-  }, [deploying, showSuccess]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deploying, showSuccess, visibleLines, currentSnippet]);
 
   function handleDeploy() {
     if (deploying) return;

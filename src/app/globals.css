@@ -255,11 +255,23 @@ video {
 .hero-stat-check {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   font-size: inherit;
 }
 
-.hero-stat-check svg {
+.hero-check-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+
+.hero-check-circle svg {
   flex-shrink: 0;
 }
 
@@ -423,32 +435,37 @@ video {
   margin: 0 auto;
 }
 
-/* --- Trampoline Section (split: video left, text right) --- */
+/* --- Trampoline Section (stacked: intro → video → desc) --- */
 .trampoline-section {
   padding: 2rem 0 4rem;
 }
 
-.trampoline-split {
-  display: flex;
-  gap: 3rem;
-  align-items: stretch;
+.trampoline-intro {
+  text-align: center;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
+  padding: 0 var(--spacing-sm);
 }
 
-.trampoline-video-side {
-  flex: 0 0 auto;
-  width: 275px;
-  position: relative;
-  overflow: hidden;
+.trampoline-intro h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.trampoline-video-block {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  padding: 0 var(--spacing-sm);
 }
 
 .trampoline-video {
-  position: absolute;
-  inset: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.06);
+  aspect-ratio: 9 / 14;
 }
 
 .trampoline-video video {
@@ -458,29 +475,14 @@ video {
   display: block;
 }
 
-.trampoline-text-side {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0.5rem 0;
+.trampoline-desc-block {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
 }
 
-.trampoline-text-side h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
-  font-weight: 800;
-  margin-bottom: 1.75rem;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.trampoline-text-side h2 em {
-  font-style: italic;
-}
-
-.trampoline-text-side p {
+.trampoline-desc-block p {
   font-size: 1.05rem;
   color: var(--color-text-muted);
   line-height: 1.7;
@@ -489,10 +491,6 @@ video {
 /* Desktop shows full copy, mobile shows shortened copy */
 .trampoline-desc-mobile {
   display: none;
-}
-
-.trampoline-text-side p + p {
-  margin-top: 0.75rem;
 }
 
 /* --- Deliverability Intro --- */
@@ -564,7 +562,7 @@ video {
 }
 
 .five-reasons-headline .cx-title-xl {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
 /* Testimonials Headline */
@@ -1232,10 +1230,10 @@ video {
   text-transform: capitalize;
 }
 
-/* Badges Grid — exact replica of copyculture.io/agency */
+/* Badges Grid — uniform width */
 .sp-badges-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   max-width: 900px;
   margin: 0 auto;
@@ -1754,9 +1752,7 @@ video {
     grid-template-columns: 1fr;
   }
 
-  .trampoline-split {
-    flex-direction: column;
-  }
+
 
   .testimonials-masonry {
     flex-direction: column;
@@ -2036,6 +2032,14 @@ video {
 .case-studies-header {
   text-align: center;
   margin-bottom: var(--spacing-lg);
+}
+
+.case-studies-title-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .case-studies-subtitle {
@@ -2394,6 +2398,36 @@ video {
     grid-template-columns: 1fr;
   }
 
+  /* Center case study text on mobile */
+  .case-study-info {
+    text-align: center;
+  }
+
+  .case-study-metrics {
+    justify-content: center;
+  }
+
+  .case-study-metric {
+    align-items: center;
+  }
+
+  /* Override right-aligned cards on mobile to center */
+  .case-study-card-right .case-study-info {
+    text-align: center;
+  }
+
+  .case-study-card-right .case-study-metrics {
+    justify-content: center;
+  }
+
+  .case-study-card-right .case-study-metric {
+    align-items: center;
+  }
+
+  .case-studies-title-hero {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
   .profit-engine-designs {
     flex-wrap: wrap;
   }
@@ -2405,6 +2439,11 @@ video {
 
   .code-terminal-tabs {
     display: none;
+  }
+
+  /* Ensure email designs scrollable track is always visible */
+  .profit-engine-scroll-track {
+    will-change: transform;
   }
 }
 
@@ -2573,28 +2612,17 @@ video {
     height: 36px;
   }
 
-  /* --- Trampoline: centered on mobile --- */
+  /* --- Trampoline: mobile adjustments --- */
   .trampoline-section {
     padding: 1rem 0 2.5rem;
   }
 
-  .trampoline-text-side {
-    align-items: center;
-    text-align: center;
-  }
-
-  .trampoline-text-side .cx-pill {
-    align-self: center;
-  }
-
-  .trampoline-text-side h2 {
-    text-align: center;
+  .trampoline-intro h2 {
     font-size: 1.6rem;
   }
 
-  .trampoline-text-side p {
-    text-align: center;
-    font-size: 1rem;
+  .trampoline-video-block {
+    max-width: 320px;
   }
 
   /* Show short mobile copy, hide desktop full copy */
@@ -2606,18 +2634,8 @@ video {
     display: block;
   }
 
-  /* Video: add side padding on mobile */
-  .trampoline-video-side {
-    width: 100%;
-    min-height: 350px;
-    padding: 0 1rem;
-  }
-
-  .trampoline-video {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    height: 350px;
+  .trampoline-desc-block p {
+    font-size: 0.95rem;
   }
 
   /* --- Five Reasons headline: BIGGER --- */
@@ -2626,7 +2644,7 @@ video {
   }
 
   .five-reasons-headline .cx-title-xl {
-    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    font-size: clamp(1.65rem, 6vw, 2.4rem);
   }
 
   /* --- Skill Cards: centered text, animation clipping --- */

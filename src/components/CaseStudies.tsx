@@ -59,8 +59,8 @@ export default function CaseStudies() {
   return (
     <section className="case-studies-section" id="case-studies">
       <div className="case-studies-header">
-        <h2 className="cx-section-title cx-title-lg">
-          Real Results. <span className="text-gradient">Real Impact.</span>
+        <h2 className="cx-section-title case-studies-title-hero">
+          Real Results.<br /><span className="text-gradient">Real Impact.</span>
         </h2>
 
       </div>
