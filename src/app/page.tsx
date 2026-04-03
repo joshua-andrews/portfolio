@@ -35,7 +35,7 @@ export default function Home() {
       {/* And here's 50+ more reasons from other people */}
       <section className="testimonials-headline">
         <h2 className="cx-section-title cx-title-xl">
-          And Here&apos;s 50+ More Reasons <span className="text-gradient">From Other People</span>
+          And Here Are 50+ More Reasons <span className="text-gradient">From Other People</span>
         </h2>
       </section>
       <Testimonials />

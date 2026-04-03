@@ -313,6 +313,7 @@ export default function ConveyorBelt() {
         <canvas ref={canvasRef} className="conveyor-belt-canvas" />
         <div className="conveyor-belt-overlay" />
       </div>
+      <span className="conveyor-belt-subtitle">When Josh manages your emails</span>
       <span className="kanban-hover-hint">Hover to boost production ✨</span>
     </div>
   );

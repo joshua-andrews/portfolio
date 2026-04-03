@@ -16,7 +16,7 @@ export default function EmailDesigns() {
     <section className="profit-engine-section" id="designs">
       <div className="profit-engine-header">
         <h2 className="cx-section-title cx-title-lg">
-          It&apos;s Time to Turn Your Klaviyo Into a{" "}
+          It&apos;s Time to Turn Your Email Marketing Channel Into a{" "}
           <span className="text-gradient">Predictable Profit Engine.</span>
         </h2>
       </div>
@@ -24,7 +24,7 @@ export default function EmailDesigns() {
       <div className="profit-engine-scroll-container">
         <div className="profit-engine-scroll-track">
           {[...emailDesigns, ...emailDesigns].map((design, i) => (
-            <EmailDesignCard key={i} design={design} />
+            <EmailDesignCard key={i} design={design} eager={i < 4} />
           ))}
         </div>
       </div>
@@ -36,8 +36,10 @@ export default function EmailDesigns() {
 
 function EmailDesignCard({
   design,
+  eager = false,
 }: {
   design: { brand: string; image: string };
+  eager?: boolean;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const animRef = useRef<number | null>(null);
@@ -70,7 +72,7 @@ function EmailDesignCard({
       onMouseLeave={handleMouseLeave}
     >
       <div className="profit-engine-card-scroll" ref={scrollRef}>
-        <img src={design.image} alt={design.brand} loading="lazy" />
+        <img src={design.image} alt={design.brand} loading={eager ? "eager" : "lazy"} />
       </div>
     </div>
   );

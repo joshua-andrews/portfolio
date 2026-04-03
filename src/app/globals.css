@@ -251,6 +251,18 @@ video {
   white-space: nowrap;
 }
 
+/* Hero checkmark stats */
+.hero-stat-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: inherit;
+}
+
+.hero-stat-check svg {
+  flex-shrink: 0;
+}
+
 /* --- CTA Button (portfolio adaptation) --- */
 .btn-primary {
   background: var(--gradient-brand);
@@ -1743,7 +1755,7 @@ video {
   }
 
   .trampoline-split {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .testimonials-masonry {
@@ -1995,6 +2007,22 @@ video {
   50% { transform: scale(1.05); }
 }
 
+/* Conveyor Belt Subtitle */
+.conveyor-belt-subtitle {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+/* Video play overlay fix — remove dark state on play */
+.video-testimonial-player video {
+  transition: none;
+}
+
 /* ============================================
    CASE STUDIES
    ============================================ */
@@ -2223,6 +2251,19 @@ video {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
+}
+
+/* Right-aligned case study cards (Kombi, Stile) */
+.case-study-card-right .case-study-info {
+  text-align: right;
+}
+
+.case-study-card-right .case-study-metrics {
+  justify-content: flex-end;
+}
+
+.case-study-card-right .case-study-metric {
+  align-items: flex-end;
 }
 
 /* ============================================
@@ -2505,6 +2546,10 @@ video {
     text-align: center;
     max-width: 100%;
     white-space: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
   }
 
   /* Stacked metrics */
@@ -2626,9 +2671,15 @@ video {
   .skill-card-visual {
     width: 100%;
     min-height: 220px;
-    max-height: 240px;
+    max-height: 280px;
     margin: 0 0.5rem;
     overflow: hidden;
+  }
+
+  /* Klaviyo flow needs more height on mobile to show bottom nodes */
+  .skill-card-visual:has(.klaviyo-flow-wrapper) {
+    min-height: 260px;
+    max-height: 300px;
   }
 
   /* Force clip ALL animation wrappers on mobile */
@@ -2657,13 +2708,17 @@ video {
     font-size: 3rem;
   }
 
-  /* --- Certificates: narrower, not edge-to-edge --- */
+  /* --- Certificates: equal width columns --- */
   .sp-badges-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
-    max-width: 340px;
+    max-width: 380px;
     margin: 0 auto;
     padding: 0 1rem;
+  }
+
+  .sp-badge {
+    width: 100%;
   }
 
   .sp-badge {
@@ -2691,7 +2746,7 @@ video {
 
   /* --- Testimonials headline: bigger --- */
   .testimonials-headline .cx-title-xl {
-    font-size: clamp(1.35rem, 5.5vw, 2rem);
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
   }
 
   /* --- Video & Written testimonials: touch scroll --- */
@@ -2748,7 +2803,7 @@ video {
 
   /* --- Email Designs (Profit Engine): fixed mobile --- */
   .profit-engine-header .cx-title-lg {
-    font-size: clamp(1.35rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 5.5vw, 2.2rem);
   }
 
   .profit-engine-scroll-container {
@@ -2774,13 +2829,14 @@ video {
     scroll-snap-align: start;
   }
 
-  /* --- Navbar: hide logo, show hamburger --- */
+  /* --- Navbar: show logo + hamburger on mobile --- */
   .navbar-logo {
-    display: none;
+    display: block;
+    font-size: 0.95rem;
   }
 
   .navbar-inner {
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 8px 16px;
   }
 }
@@ -2830,7 +2886,7 @@ video {
   }
 
   .testimonials-headline .cx-title-xl {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    font-size: clamp(1.35rem, 5.5vw, 1.8rem);
   }
 
   .case-studies-header .cx-title-lg {
@@ -2838,7 +2894,7 @@ video {
   }
 
   .profit-engine-header .cx-title-lg {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
   }
 
   .navbar-mobile-link {

@@ -215,9 +215,6 @@ export default function TaskPipeline() {
                         className={`kanban-col-dot kanban-col-dot-${colIdx}`}
                       />
                       <span className="kanban-col-title">{colName}</span>
-                      <span className="kanban-col-count">
-                        {getColumnCards(colIdx).length}
-                      </span>
                     </div>
                     <div className="kanban-column-body">
                       {getColumnCards(colIdx).map((card) => (

@@ -327,9 +327,6 @@ function MiniKanban() {
                   className={`kanban-col-dot kanban-col-dot-${colIdx}`}
                 />
                 <span className="kanban-col-title">{colName}</span>
-                <span className="kanban-col-count">
-                  {getColumnCards(colIdx).length}
-                </span>
               </div>
               <div className="kanban-column-body">
                 {getColumnCards(colIdx).map((card) => (
@@ -405,7 +402,7 @@ const skills = [
       "They're the foundation. This is what it looks like when I manage your email marketing system.",
     ],
     mobileParagraphs: [
-      "I don't just write emails. I understand the technical infrastructure behind consistent inbox placement. This is what it looks like when I manage your email deliverability:",
+      "I don't just write emails. I understand the technical infrastructure behind consistent inbox placement.",
     ],
     footnote: null,
     customVisual: "conveyor",
@@ -428,22 +425,25 @@ const skills = [
     title: "",
     titleJsx: <>I Turn Klaviyo Into<br />35–40% of Your Revenue</>,
     desktopParagraphs: [
-      "I create both basic and advanced flows, segmentation, and campaign strategies that work cohesively to improve your core KPIs.",
+      "I create advanced flow segmentation and campaign strategies that work cohesively to improve your core KPIs.",
     ],
     mobileParagraphs: [
-      "I create both basic and advanced flows, segmentation, and campaign strategies that work cohesively to improve your core KPIs.",
+      "I create advanced flow segmentation and campaign strategies that work cohesively to improve your core KPIs.",
     ],
     footnote: null,
     customVisual: "klaviyoFlow",
   },
   {
-    label: "5. Full-Stack AI Development",
-    title: "I Can Also Literally Make You Anything You Want.",
+    label: "5. Full-Stack Development",
+    title: "",
+    titleJsx: <>I Can Also Literally Make You<br />Anything You Want to See.</>,
     desktopParagraphs: [
-      "I've developed everything from intelligent social media content generators to enterprise-grade internal software for B2B. What do you want to see?",
+      "I've developed everything from intelligent social media content generators to enterprise-grade internal software for B2B.",
+      "What do you want to see?",
     ],
     mobileParagraphs: [
-      "I've developed everything from intelligent social media content generators to enterprise-grade internal software for B2B. What do you want to see?",
+      "I've developed everything from intelligent social media content generators to enterprise-grade internal software for B2B.",
+      "What do you want to see?",
     ],
     footnote: null,
     customVisual: "codeTerminal",

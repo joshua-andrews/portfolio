@@ -68,7 +68,7 @@ export default function CaseStudies() {
         {caseStudies.map((study, i) => (
           <div
             key={i}
-            className="case-study-card"
+            className={`case-study-card ${(i === 1 || i === 2) ? 'case-study-card-right' : ''}`}
             onClick={() => setActiveStudy(i)}
           >
             <div className="case-study-image">
