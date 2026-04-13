@@ -31,7 +31,7 @@ export default function Hero() {
         <p className="cx-hero-subtitle hero-stats-desktop">
           <span className="hero-metric">100+ Clients</span>
           <span className="hero-metric-divider"> | </span>
-          <span className="hero-metric">$2.7M+ Generated</span>
+          <span className="hero-metric">$1.5M+ Generated</span>
           <span className="hero-metric-divider"> | </span>
           <span className="hero-metric">500K+ Subscribers Managed</span>
         </p>
@@ -48,7 +48,7 @@ export default function Hero() {
             <span className="hero-check-circle">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
             </span>
-            <span>$2.7M+ Generated</span>
+            <span>$1.5M+ Generated</span>
           </span>
           <span className="hero-metric hero-stat-check">
             <span className="hero-check-circle">

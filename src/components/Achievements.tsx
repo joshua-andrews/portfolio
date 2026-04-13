@@ -118,7 +118,7 @@ export default function Achievements() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const counter1 = useCounter(27, 3500, isVisible);
+  const counter1 = useCounter(15, 3500, isVisible);
   const counter2 = useCounter(500, 3500, isVisible);
   const counter3 = useCounter(100, 3500, isVisible);
 

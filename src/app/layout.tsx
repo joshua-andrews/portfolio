@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Josh Andrews | Email Marketer",
   description:
-    "Email marketer specializing in Klaviyo, lifecycle marketing, and email deliverability. $2.7M+ revenue generated, 500K+ subscribers managed, 100+ clients served.",
+    "Email marketer specializing in Klaviyo, lifecycle marketing, and email deliverability. $1.5M+ revenue generated, 500K+ subscribers managed, 100+ clients served.",
 };
 
 export default function RootLayout({
