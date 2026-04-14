@@ -2972,3 +2972,291 @@ video {
     font-size: 1.3rem;
   }
 }
+
+/* ============================================
+   WELCOME FLOW ANIMATION (Nerdwax Case Study)
+   ============================================ */
+.welcome-flow-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0a0e1a;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header bar */
+.wf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #1a1f35, #0f1225);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.wf-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wf-klaviyo-logo {
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: #fff;
+  letter-spacing: -0.03em;
+  opacity: 0.9;
+}
+
+.wf-flow-name {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+}
+
+.wf-live-badge {
+  font-size: 0.6rem;
+  color: #22c55e;
+  font-weight: 600;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Canvas area */
+.wf-canvas {
+  flex: 1;
+  overflow: hidden;
+  padding: 16px 20px;
+  scrollbar-width: none;
+}
+
+.wf-canvas::-webkit-scrollbar {
+  display: none;
+}
+
+.wf-flow-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-bottom: 20px;
+}
+
+/* Node group (connector + card) */
+.wf-node-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Connector line between nodes */
+.wf-connector {
+  width: 2px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wf-connector-line {
+  width: 2px;
+  height: 100%;
+  border-left: 2px dashed rgba(100, 116, 139, 0.3);
+}
+
+.wf-connector-pulse {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wf-pulse-active {
+  opacity: 1;
+  animation: wf-pulse-flow 1s ease-in-out infinite;
+}
+
+@keyframes wf-pulse-flow {
+  0% { transform: translateY(-8px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(8px); opacity: 0; }
+}
+
+/* Node card */
+.wf-node {
+  width: 85%;
+  max-width: 240px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 8px 10px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.wf-node-active {
+  transform: scale(1.03);
+}
+
+.wf-node-delay {
+  max-width: 160px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.wf-node-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.wf-node-icon {
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.wf-node-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wf-node-detail {
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 20px;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.wf-node-delay .wf-node-label {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.wf-node-delay .wf-node-header {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* Stats row */
+.wf-node-stats {
+  display: flex;
+  gap: 8px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.wf-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.wf-stat-label {
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.wf-stat-value {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Summary bar */
+.wf-summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 10px;
+  background: linear-gradient(135deg, #1a1f35, #0f1225);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.wf-summary-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.wf-summary-num {
+  font-size: 0.8rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.wf-summary-label {
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* ── Nerdwax Wide Modal ── */
+.case-study-modal-wide {
+  max-width: 720px !important;
+  width: 95vw !important;
+}
+
+.nw-flow-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 0 24px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.nw-flow-tab {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.nw-flow-tab:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nw-flow-tab-active {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #3b82f6;
+}
+
+.nw-flow-container {
+  margin: 8px 24px 24px;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}

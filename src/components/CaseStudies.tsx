@@ -1,8 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
+import WelcomeFlowAnimation from "./WelcomeFlowAnimation";
+import AbandonedCheckoutFlow from "./AbandonedCheckoutFlow";
+import UpsellFlow from "./UpsellFlow";
 
 const caseStudies = [
+  {
+    brand: "Nerdwax",
+    type: "Full Klaviyo Lifecycle Rebuild",
+    image: "/images/case-studies/nerdwax.png",
+    hasFlowAnimation: true,
+    metrics: [
+      { value: "+257%", label: "KLAVIYO REV", color: "#22c55e" },
+      { value: "$286K", label: "Q1 ATTRIBUTED", color: "#f59e0b" },
+      { value: "+1,245%", label: "FLOW GROWTH", color: "#a855f7" },
+    ],
+    details:
+      "Rebuilt the entire Klaviyo flow ecosystem from scratch for Nerdwax. Grew total Klaviyo-attributed revenue from $80K to $286K (+257% YoY). Flow revenue exploded from $6.1K to $82.7K (+1,245%) by activating 5+ dormant flows, fixing structural bugs, and optimizing the Welcome Series which now drives 54.2% open rates and 6.8% click rates. Campaign revenue per 1K emails delivered grew 40%. Reduced abandoned checkout unsubscribes by 93%.",
+  },
   {
     brand: "Alveos",
     type: "Kickstarter Campaign Email Marketing",
@@ -53,8 +69,23 @@ const caseStudies = [
   },
 ];
 
+/* Flow tabs for Nerdwax modal */
+const FLOW_TABS = [
+  { id: "welcome", label: "Welcome Series" },
+  { id: "abandoned-checkout", label: "Abandoned Checkout" },
+  { id: "upsell", label: "Upsell" },
+  // Future tabs:
+  // { id: "abandoned-cart", label: "Abandoned Cart" },
+  // { id: "price-drop", label: "Price Drop" },
+  // { id: "upsell", label: "Upsell" },
+];
+
 export default function CaseStudies() {
   const [activeStudy, setActiveStudy] = useState<number | null>(null);
+  const [activeFlowTab, setActiveFlowTab] = useState("welcome");
+
+  const activeData = activeStudy !== null ? caseStudies[activeStudy] : null;
+  const isNerdwax = activeData && (activeData as any).hasFlowAnimation;
 
   return (
     <section className="case-studies-section" id="case-studies">
@@ -69,7 +100,7 @@ export default function CaseStudies() {
           <div
             key={i}
             className="case-study-card"
-            onClick={() => setActiveStudy(i)}
+            onClick={() => { setActiveStudy(i); setActiveFlowTab("welcome"); }}
           >
             <div className="case-study-image">
               <img src={study.image} alt={study.brand} loading="lazy" />
@@ -99,13 +130,13 @@ export default function CaseStudies() {
       </div>
 
       {/* Popup modal */}
-      {activeStudy !== null && (
+      {activeStudy !== null && activeData && (
         <div
           className="case-study-modal-backdrop"
           onClick={() => setActiveStudy(null)}
         >
           <div
-            className="case-study-modal"
+            className={`case-study-modal ${isNerdwax ? "case-study-modal-wide" : ""}`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -114,34 +145,65 @@ export default function CaseStudies() {
             >
               ✕
             </button>
-            <div className="case-study-modal-image">
-              <img
-                src={caseStudies[activeStudy].image}
-                alt={caseStudies[activeStudy].brand}
-              />
-            </div>
-            <div className="case-study-modal-content">
-              <h3>{caseStudies[activeStudy].brand}</h3>
-              <p className="case-study-modal-type">
-                {caseStudies[activeStudy].type}
-              </p>
-              <p className="case-study-modal-details">
-                {caseStudies[activeStudy].details}
-              </p>
-              <div className="case-study-metrics">
-                {caseStudies[activeStudy].metrics.map((m, j) => (
-                  <div key={j} className="case-study-metric">
-                    <span
-                      className="case-study-metric-value"
-                      style={{ color: m.color }}
-                    >
-                      {m.value}
-                    </span>
-                    <span className="case-study-metric-label">{m.label}</span>
+
+            {isNerdwax ? (
+              /* ── Nerdwax: Flow animation modal ── */
+              <>
+                <div className="case-study-modal-content">
+                  <h3>{activeData.brand}</h3>
+                  <p className="case-study-modal-type">{activeData.type}</p>
+                  <p className="case-study-modal-details">{activeData.details}</p>
+                  <div className="case-study-metrics">
+                    {activeData.metrics.map((m, j) => (
+                      <div key={j} className="case-study-metric">
+                        <span className="case-study-metric-value" style={{ color: m.color }}>{m.value}</span>
+                        <span className="case-study-metric-label">{m.label}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+
+                {/* Flow tabs */}
+                <div className="nw-flow-tabs">
+                  {FLOW_TABS.map((tab) => (
+                    <button
+                      key={tab.id}
+                      className={`nw-flow-tab ${activeFlowTab === tab.id ? "nw-flow-tab-active" : ""}`}
+                      onClick={() => setActiveFlowTab(tab.id)}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Flow animation */}
+                <div className="nw-flow-container">
+                  {activeFlowTab === "welcome" && <WelcomeFlowAnimation />}
+                  {activeFlowTab === "abandoned-checkout" && <AbandonedCheckoutFlow />}
+                  {activeFlowTab === "upsell" && <UpsellFlow />}
+                </div>
+              </>
+            ) : (
+              /* ── Standard case study modal ── */
+              <>
+                <div className="case-study-modal-image">
+                  <img src={activeData.image} alt={activeData.brand} />
+                </div>
+                <div className="case-study-modal-content">
+                  <h3>{activeData.brand}</h3>
+                  <p className="case-study-modal-type">{activeData.type}</p>
+                  <p className="case-study-modal-details">{activeData.details}</p>
+                  <div className="case-study-metrics">
+                    {activeData.metrics.map((m, j) => (
+                      <div key={j} className="case-study-metric">
+                        <span className="case-study-metric-value" style={{ color: m.color }}>{m.value}</span>
+                        <span className="case-study-metric-label">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
