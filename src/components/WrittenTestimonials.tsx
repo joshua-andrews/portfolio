@@ -20,7 +20,7 @@ const reviews = [
   {
     text: `"He's hands down the best email marketer I've ever worked with. Josh doesn't just check the boxes. He elevates the entire process, and it shows in the results."`,
     name: "Suki H.",
-    role: "Project Manager @ Rainfactory",
+    role: "Creator Growth Strategist @ TikTok",
   },
   {
     text: `"He continually worked to develop creative solutions that would save the company money. If you're looking for someone with a never-ending passion for problem solving, Josh is your guy."`,

@@ -22,8 +22,8 @@ const videoTestimonials = [
   },
   {
     name: "Suki",
-    role: "Project Manager",
-    company: "Rainfactory",
+    role: "Creator Growth Strategist",
+    company: "TikTok",
     src: "https://testimony-videos-josh.s3.us-east-2.amazonaws.com/Suki%20Testimonial.mp4#t=1",
   },
   {
