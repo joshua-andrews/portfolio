@@ -13,17 +13,17 @@ const reviews = [
     role: "Marketing Director @ 3 Brothers Decking",
   },
   {
-    text: `"His thorough analysis and process adjustments are exemplary. The video addition explaining the rationale provided clear knowledge transfer. Great job, Josh! 🎉 🍾"`,
+    text: `"I’d like to recognize Josh for his exceptional ability with refining email strategy. His thorough analysis, well-structured recommendations, and proactive process improvements set a high standard... an incredible asset to any team."`,
     name: "Dominic L.",
     role: "Dir. Marketing @ Rainfactory | $1B+ Generated",
   },
   {
-    text: `"He's hands down the best email marketer I've ever worked with. Josh doesn't just check the boxes. He elevates the entire process, and it shows in the results."`,
+    text: `"Josh has completely redefined what I expect from an email marketing specialist. He's not only incredibly professional, proactive and creative, he's also one of the kindest and most thoughtful I've ever met."`,
     name: "Suki H.",
     role: "Creator Growth Strategist @ TikTok",
   },
   {
-    text: `"He continually worked to develop creative solutions that would save the company money. If you're looking for someone with a never-ending passion for problem solving, Josh is your guy."`,
+    text: `"He never stopped thinking about how to improve our processes and continually worked to develop creative solutions. If you're looking for someone with a never-ending passion for problem solving, Josh is your guy."`,
     name: "Christie Z.",
     role: "Head of Comms @ Rainfactory",
   },
@@ -36,6 +36,11 @@ const reviews = [
     text: `"Josh is a Klaviyo MASTER — generated ~$1000 in 3 days for our start up, 65%+ open rates, 7%+ click rates. Working with him transformed our email marketing from zero to hero."`,
     name: "Isaac B.",
     role: "Founder @ Stile dè Amor Galleria",
+  },
+  {
+    text: `"Josh has a rare combination of technical skill, strategic thinking, and genuine curiosity. His ability to brainstorm innovative ways to automate processes... genuinely transformed the way we approach projects."`,
+    name: "Tasha S.",
+    role: "Enterprise Account Manager @ Fluz",
   },
 ];
 
