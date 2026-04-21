@@ -18,7 +18,7 @@ const reviews = [
     role: "Dir. Marketing @ Rainfactory | $1B+ Generated",
   },
   {
-    text: `"Josh has completely redefined what I expect from an email marketing specialist. He's not only incredibly professional, proactive and creative, he's also one of the kindest and most thoughtful I've ever met."`,
+    text: `"Josh has completely redefined what I expect from an email marketing specialist. He's not only incredibly professional, proactive and creative, he's also one of the kindest and most thoughtful people I've ever met."`,
     name: "Suki H.",
     role: "Creator Growth Strategist @ TikTok",
   },
