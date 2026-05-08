@@ -117,13 +117,20 @@ export default async function CompanyPage({
 
   return (
     <>
+      {/* Reduce hero padding so pill+headline+stats+video+CTA are above the fold */}
+      <style>{`
+        .cx-hero { padding-top: calc(var(--header-height) + 2rem) !important; padding-bottom: 2rem !important; }
+        .cx-hero-title { margin-bottom: 1rem !important; }
+        .cx-hero-subtitle { margin-bottom: 1.5rem !important; }
+        .cx-pill { margin-bottom: 1rem !important; }
+      `}</style>
       <Navbar />
 
       {/* ── Personalized Hero (same structure as homepage Hero) ── */}
       <section className="cx-hero" id="hero">
         <div className="container">
           <div className="cx-pill">
-            {data.companyName.toUpperCase()} LOOKING FOR {/^[AEIOU]/i.test(data.roleTitle) ? "AN" : "A"} {data.roleTitle.toUpperCase()}?
+            {data.companyName.toUpperCase()}, LOOKING FOR {/^[AEIOU]/i.test(data.roleTitle) ? "AN" : "A"} {data.roleTitle.toUpperCase()}?
           </div>
           <h1 className="cx-hero-title">
             I Build Email Systems So Sharp,<br />
@@ -161,11 +168,12 @@ export default async function CompanyPage({
             </span>
           </p>
 
-          {/* ── Sonata Video — inserted between subtext and CTA ── */}
+          {/* ── Sonata Video — full width matching headline ── */}
           {data.videoUrl && (
             <div style={{
-              maxWidth: 720,
-              margin: "2rem auto",
+              width: "100%",
+              maxWidth: 960,
+              margin: "1.25rem auto",
               borderRadius: 16,
               overflow: "hidden",
               border: "2px solid rgba(255,255,255,0.08)",
