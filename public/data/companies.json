@@ -1,0 +1,30 @@
+[
+  {
+    "shortId": "yswdn",
+    "slug": "glossier",
+    "companyName": "Glossier",
+    "roleTitle": "Email Marketing Manager",
+    "videoUrl": "https://sonata-josh.s3.amazonaws.com/videos/glossier-test.webm",
+    "highlights": [
+      "Lifecycle marketing specialist with hands-on Klaviyo expertise",
+      "Proven email campaigns driving measurable revenue growth",
+      "Strategic approach to retention, engagement, and brand storytelling"
+    ],
+    "introText": "Hi Glossier team — I created this page specifically for you. I've been following your brand and I'd love to bring my email marketing expertise to your team.",
+    "createdAt": "2026-05-08T19:30:00Z"
+  },
+  {
+    "shortId": "t2cmd",
+    "slug": "tets",
+    "companyName": "Tets",
+    "roleTitle": "Test Role",
+    "videoUrl": "https://sonata-josh.s3.amazonaws.com/videos/tets-1778270687418.webm",
+    "highlights": [
+      "Lifecycle marketing specialist with hands-on Klaviyo expertise",
+      "Proven email campaigns driving measurable revenue growth",
+      "Strategic approach to retention, engagement, and brand storytelling"
+    ],
+    "introText": "Hi Tets team — I created this page specifically for you. I've been following your brand and I'd love to bring my email marketing expertise to your team. Let's connect.",
+    "createdAt": "2026-05-08T20:07:03.256Z"
+  }
+]
