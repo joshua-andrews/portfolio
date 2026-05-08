@@ -1,13 +1,23 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import _companiesData from "../../../../public/data/companies.json";
+
+import Navbar from "@/components/Navbar";
+import Trampoline from "@/components/Trampoline";
+import { SkillCardsTop, SkillCardsBottom } from "@/components/SkillCards";
+import Achievements from "@/components/Achievements";
+import EmailDesigns from "@/components/EmailDesigns";
+import Testimonials from "@/components/Testimonials";
+import WrittenTestimonials from "@/components/WrittenTestimonials";
+import MidCTA from "@/components/MidCTA";
+import CaseStudies from "@/components/CaseStudies";
+import CTA from "@/components/CTA";
 
 // ============================================================
 // Portfolio — Dynamic Company Page
 // ============================================================
-// Generated at build time from public/data/companies.json.
-// URL: joshandrewz.com/{shortId}/{company-slug}
-// The shortId is a random 5-char alphanumeric string that makes
-// each URL unique and non-guessable.
+// An exact copy of joshandrewz.com with a personalized hero
+// and the Sonata video inserted beneath the hero subtext.
 
 interface CompanyPageData {
   shortId: string;
@@ -22,6 +32,22 @@ interface CompanyPageData {
 
 const companiesData = _companiesData as CompanyPageData[];
 
+// Brand logos — identical to Hero.tsx
+const brands = [
+  { name: "Nerdwax", logo: "https://copyculture.io/Brand%20Logos/Nerdwax.png" },
+  { name: "Alveos", logo: "https://copyculture.io/Brand%20Logos/Alveos.png" },
+  { name: "3 Brothers Decking", logo: "https://copyculture.io/Brand%20Logos/3%20Brothers%20Decking.png" },
+  { name: "Habitual Herbs", logo: "https://copyculture.io/Brand%20Logos/Habitual%20Herbs.png" },
+  { name: "Funday", logo: "/logos/funday.svg" },
+  { name: "Tafari Wraps", logo: "https://copyculture.io/Brand%20Logos/Tafari%20Wraps.png" },
+  { name: "Rainfactory", logo: "/logos/rainfactory.svg" },
+  { name: "Viasox", logo: "https://ca.viasox.com/cdn/shop/files/Viasox_Logo_Real.svg?v=1718991331&width=120" },
+  { name: "Publishing Life Services", logo: "https://publishingservices.com/cdn/shop/files/PS_final_gold-2_200x.png?v=1673438297" },
+  { name: "Copy Culture", logo: "https://copyculture.io/assets/logo-final.png" },
+  { name: "Lion Marketing", logo: "/logos/lionmarketing.svg" },
+];
+const allLogos = Array(4).fill(brands).flat();
+
 // ── Static Generation ───────────────────────────────────
 
 export const dynamicParams = false;
@@ -32,7 +58,6 @@ export async function generateStaticParams() {
     company: company.slug,
   }));
 
-  // Placeholder to satisfy Next.js 16 static export
   if (!params.some((p) => p.shortId === "_" && p.company === "_")) {
     params.push({ shortId: "_", company: "_" });
   }
@@ -52,30 +77,16 @@ export async function generateMetadata({
 
   if (!data) {
     return {
-      title: "Josh Andrews",
+      title: "Josh Andrews | Email Marketer",
       description: "Email marketer and lifecycle marketing specialist.",
     };
   }
 
   return {
-    title: `Josh Andrews × ${data.companyName}`,
+    title: `Josh Andrews | Email Marketer`,
     description: `A personalized introduction from Josh Andrews for the ${data.roleTitle} role at ${data.companyName}.`,
   };
 }
-
-// ── View Tracking Script ────────────────────────────────
-const VIEW_TRACK_SCRIPT = `
-(function() {
-  var endpoint = document.querySelector('meta[name="view-track"]');
-  if (endpoint && endpoint.content) {
-    var path = window.location.pathname;
-    fetch(endpoint.content + '?path=' + encodeURIComponent(path) + '&r=' + encodeURIComponent(document.referrer), {
-      method: 'GET',
-      mode: 'no-cors'
-    }).catch(function() {});
-  }
-})();
-`;
 
 export default async function CompanyPage({
   params,
@@ -90,391 +101,142 @@ export default async function CompanyPage({
   if (!data) {
     return (
       <>
-        <style>{pageStyles}</style>
-        <div className="company-page">
-          <div className="company-container">
-            <div className="company-not-found">
-              <h1>Page Not Found</h1>
-              <p>This company page doesn&apos;t exist yet.</p>
-              <a href="/" className="company-cta-btn">
-                ← Visit My Portfolio
-              </a>
-            </div>
+        <Navbar />
+        <section className="cx-hero" id="hero">
+          <div className="container" style={{ textAlign: "center", paddingTop: 80 }}>
+            <h1 className="cx-hero-title">Page Not Found</h1>
+            <p className="cx-hero-subtitle">This company page doesn&apos;t exist yet.</p>
+            <a href="https://joshandrewz.com" className="btn-gradient">
+              ← Visit My Portfolio
+            </a>
           </div>
-        </div>
+        </section>
       </>
     );
   }
 
   return (
     <>
-      <style>{pageStyles}</style>
-      <meta
-        name="view-track"
-        content={process.env.VIEW_TRACK_ENDPOINT || ""}
-      />
-      <script dangerouslySetInnerHTML={{ __html: VIEW_TRACK_SCRIPT }} />
+      <Navbar />
 
-      <div className="company-page">
-        {/* ── Nav Bar ───────────────────────────────── */}
-        <nav className="company-nav">
-          <a href="/" className="company-logo">Josh Andrews</a>
-          <div className="company-nav-links">
-            <a href="/#skills">Skills</a>
-            <a href="/#achievements">Achievements</a>
-            <a href="/#testimonials">Testimonials</a>
-            <a href="/#case-studies">Case Studies</a>
+      {/* ── Personalized Hero (same structure as homepage Hero) ── */}
+      <section className="cx-hero" id="hero">
+        <div className="container">
+          <div className="cx-pill">
+            {data.companyName.toUpperCase()} LOOKING FOR {/^[AEIOU]/i.test(data.roleTitle) ? "AN" : "A"} {data.roleTitle.toUpperCase()}?
           </div>
-        </nav>
+          <h1 className="cx-hero-title">
+            I Build Email Systems So Sharp,<br />
+            <span className="cx-highlight">They Should Come With a Disclaimer.</span>
+          </h1>
 
-        <div className="company-container">
-          {/* ── Hero Section ────────────────────────── */}
-          <header className="company-hero">
-            <div className="company-eyebrow">
-              {data.companyName.toUpperCase()} LOOKING FOR {/^[AEIOU]/i.test(data.roleTitle) ? "AN" : "A"} {data.roleTitle.toUpperCase()}?
-            </div>
-            <h1 className="company-title">
-              A Personal Message for{" "}
-              <span className="company-gradient">{data.companyName}</span>
-            </h1>
-            <p className="company-subtitle">
-              {data.roleTitle} • Personalized for you
-            </p>
-          </header>
+          {/* Desktop stats */}
+          <p className="cx-hero-subtitle hero-stats-desktop">
+            <span className="hero-metric">100+ Clients</span>
+            <span className="hero-metric-divider"> | </span>
+            <span className="hero-metric">$1.5M+ Generated</span>
+            <span className="hero-metric-divider"> | </span>
+            <span className="hero-metric">500K+ Subscribers Managed</span>
+          </p>
 
-          {/* ── Intro Text ─────────────────────────── */}
-          {data.introText && (
-            <section className="company-intro-section">
-              <div className="company-intro-card">
-                <p>{data.introText}</p>
-              </div>
-            </section>
-          )}
+          {/* Mobile stats */}
+          <p className="cx-hero-subtitle hero-stats-mobile">
+            <span className="hero-metric hero-stat-check">
+              <span className="hero-check-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>100+ Clients</span>
+            </span>
+            <span className="hero-metric hero-stat-check">
+              <span className="hero-check-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>$1.5M+ Generated</span>
+            </span>
+            <span className="hero-metric hero-stat-check">
+              <span className="hero-check-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <span>500K+ Subscribers Managed</span>
+            </span>
+          </p>
 
-          {/* ── Highlights ─────────────────────────── */}
-          {data.highlights && data.highlights.length > 0 && (
-            <section className="company-highlights">
-              <h2>What I Bring to the Table</h2>
-              <div className="company-highlights-grid">
-                {data.highlights.map((highlight, i) => (
-                  <div key={i} className="company-highlight-item">
-                    <div className="company-highlight-number">{i + 1}</div>
-                    <p>{highlight}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* ── Video — 16:9, between content and CTA ── */}
+          {/* ── Sonata Video — inserted between subtext and CTA ── */}
           {data.videoUrl && (
-            <section className="company-video-section">
-              <div className="company-video-wrapper">
-                <video
-                  src={data.videoUrl}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="company-video"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </section>
+            <div style={{
+              maxWidth: 720,
+              margin: "2rem auto",
+              borderRadius: 16,
+              overflow: "hidden",
+              border: "2px solid rgba(255,255,255,0.08)",
+              background: "#000",
+              boxShadow: "0 8px 48px rgba(0,0,0,0.5)",
+              aspectRatio: "16/9",
+            }}>
+              <video
+                src={data.videoUrl}
+                controls
+                playsInline
+                preload="metadata"
+                style={{ width: "100%", height: "100%", display: "block", objectFit: "contain" }}
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           )}
 
-          {/* ── CTA ────────────────────────────────── */}
-          <section className="company-cta-section">
-            <a href="/" className="company-cta-btn company-cta-primary">
-              Let&apos;s Chat →
-            </a>
-          </section>
-
-          {/* ── Footer ─────────────────────────────── */}
-          <footer className="company-footer">
-            <p>
-              &copy; {new Date().getFullYear()} Josh Andrews. This page was
-              created specifically for {data.companyName}.
-            </p>
-          </footer>
+          <a
+            href="https://joshandrewz.com"
+            className="btn-gradient"
+          >
+            Let&apos;s Chat
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
         </div>
-      </div>
+
+        {/* Trust Marquee — identical to homepage */}
+        <div className="container" style={{ marginTop: "3.8rem" }}>
+          <div className="marquee" aria-label="Brands we've worked with">
+            <div className="track" role="list">
+              {allLogos.map((brand, i) => (
+                <div key={i} className="logo-item" role="listitem">
+                  <img src={brand.logo} alt={brand.name} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Rest of the page: exact same as homepage ── */}
+      <div className="section-divider" />
+      <Trampoline />
+      <section className="five-reasons-headline">
+        <h2 className="cx-section-title cx-title-xl">
+          Here are Top 5 Reasons Why You Should <s>Fear</s> Consider Me
+        </h2>
+      </section>
+
+      <SkillCardsTop />
+      <Achievements />
+      <SkillCardsBottom />
+
+      <section className="testimonials-headline">
+        <h2 className="cx-section-title cx-title-xl">
+          And Here Are 50+ More Reasons <span className="text-gradient">From Other People</span>
+        </h2>
+      </section>
+      <Testimonials />
+      <WrittenTestimonials />
+      <MidCTA />
+      <CaseStudies />
+      <EmailDesigns />
+      <CTA />
+      <footer className="footer">
+        <p>&copy; {new Date().getFullYear()} Josh Andrews. All rights reserved.</p>
+      </footer>
     </>
   );
 }
-
-// ── Page Styles ─────────────────────────────────────────
-const pageStyles = `
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap');
-
-  .company-page {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #07070d;
-    color: #eaeaf4;
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-
-  .company-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .company-logo {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: #eaeaf4;
-    text-decoration: none;
-  }
-
-  .company-nav-links {
-    display: flex;
-    gap: 24px;
-  }
-
-  .company-nav-links a {
-    color: rgba(234, 234, 244, 0.6);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-
-  .company-nav-links a:hover {
-    color: #eaeaf4;
-  }
-
-  .company-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 24px 40px;
-  }
-
-  .company-hero {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-top: 40px;
-  }
-
-  .company-eyebrow {
-    display: inline-block;
-    padding: 6px 16px;
-    border-radius: 999px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    background: rgba(249, 115, 22, 0.1);
-    color: #f97316;
-    border: 1px solid rgba(249, 115, 22, 0.25);
-    margin-bottom: 24px;
-  }
-
-  .company-title {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    font-size: 2.6rem;
-    margin-bottom: 12px;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-  }
-
-  .company-gradient {
-    background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .company-subtitle {
-    font-size: 1.05rem;
-    color: rgba(234, 234, 244, 0.55);
-  }
-
-  /* ── Video — 16:9 screen recording ── */
-  .company-video-section {
-    margin-bottom: 32px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .company-video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.08);
-    background: #000;
-    box-shadow: 0 8px 48px rgba(0, 0, 0, 0.5);
-  }
-
-  .company-video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  /* ── CTA ── */
-  .company-cta-section {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-
-  .company-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 32px;
-    border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    border: none;
-  }
-
-  .company-cta-primary {
-    background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
-    color: white;
-    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
-  }
-
-  .company-cta-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(249, 115, 22, 0.45);
-  }
-
-  /* ── Highlights ── */
-  .company-highlights {
-    margin-bottom: 48px;
-  }
-
-  .company-highlights h2 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .company-highlights-grid {
-    display: grid;
-    gap: 16px;
-  }
-
-  .company-highlight-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: #0e0e18;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
-    padding: 20px 24px;
-    transition: all 0.25s ease;
-  }
-
-  .company-highlight-item:hover {
-    border-color: rgba(249, 115, 22, 0.3);
-    transform: translateX(4px);
-  }
-
-  .company-highlight-number {
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #f97316, #ec4899);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    font-size: 0.9rem;
-    color: white;
-  }
-
-  .company-highlight-item p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: rgba(234, 234, 244, 0.7);
-  }
-
-  .company-intro-section {
-    margin-bottom: 48px;
-  }
-
-  .company-intro-card {
-    background: #0e0e18;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    padding: 32px;
-  }
-
-  .company-intro-card p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: rgba(234, 234, 244, 0.7);
-    margin: 0;
-  }
-
-  .company-footer {
-    text-align: center;
-    padding: 24px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .company-footer p {
-    font-size: 0.8rem;
-    color: rgba(234, 234, 244, 0.3);
-    margin: 0;
-  }
-
-  .company-not-found {
-    text-align: center;
-    padding: 80px 0;
-  }
-
-  .company-not-found h1 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    font-size: 2rem;
-    margin-bottom: 12px;
-  }
-
-  .company-not-found p {
-    color: rgba(234, 234, 244, 0.55);
-    margin-bottom: 24px;
-  }
-
-  @media (max-width: 640px) {
-    .company-title {
-      font-size: 1.8rem;
-    }
-
-    .company-container {
-      padding: 24px 16px;
-    }
-
-    .company-nav {
-      padding: 12px 16px;
-    }
-
-    .company-nav-links {
-      display: none;
-    }
-
-    .company-video-wrapper {
-      max-width: 100%;
-    }
-  }
-`;
