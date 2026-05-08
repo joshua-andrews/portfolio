@@ -131,7 +131,7 @@ export default async function CompanyPage({
           {/* ── Hero Section ────────────────────────── */}
           <header className="company-hero">
             <div className="company-eyebrow">
-              {data.companyName.toUpperCase()} LOOKING FOR A {data.roleTitle.toUpperCase()}?
+              {data.companyName.toUpperCase()} LOOKING FOR {/^[AEIOU]/i.test(data.roleTitle) ? "AN" : "A"} {data.roleTitle.toUpperCase()}?
             </div>
             <h1 className="company-title">
               A Personal Message for{" "}
