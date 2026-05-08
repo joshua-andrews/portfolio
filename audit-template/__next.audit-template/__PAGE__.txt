@@ -1,0 +1,199 @@
+1:"$Sreact.fragment"
+2e:I[97367,["/_next/static/chunks/0dbhjjzl8qfwv.js"],"OutletBoundary"]
+2f:"$Sreact.suspense"
+2:T12b2,
+        .audit-page {
+          font-family: 'Inter', sans-serif;
+          background: #0a0a0f;
+          color: #e8e8f0;
+          line-height: 1.7;
+          padding: 40px 20px;
+          min-height: 100vh;
+        }
+        .audit-container { max-width: 900px; margin: 0 auto; }
+        .audit-page h1 {
+          font-family: 'Outfit', sans-serif;
+          font-weight: 800;
+          font-size: 2.4rem;
+          margin: 48px 0 16px;
+          text-align: center;
+          background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .audit-page h1:first-of-type { margin-top: 0; }
+        .audit-page h1.audit-subtitle {
+          font-size: 1.6rem;
+          margin-top: 4px;
+          text-align: center;
+          opacity: 0.85;
+        }
+        .audit-page h2 {
+          font-family: 'Outfit', sans-serif;
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: #e8e8f0;
+          margin: 32px 0 12px;
+        }
+        .audit-page h3 {
+          font-family: 'Outfit', sans-serif;
+          font-weight: 700;
+          font-size: 1.2rem;
+          color: #f97316;
+          margin: 28px 0 10px;
+        }
+        .audit-page h4 {
+          font-weight: 600;
+          font-size: 0.95rem;
+          color: #a855f7;
+          margin: 20px 0 8px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+        .audit-page p {
+          color: rgba(232, 232, 240, 0.6);
+          margin-bottom: 12px;
+          font-size: 0.95rem;
+        }
+        .audit-page strong { color: #e8e8f0; }
+        .audit-page hr {
+          border: none;
+          height: 1px;
+          background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
+          margin: 40px 0;
+          opacity: 0.4;
+        }
+        .audit-page ul {
+          list-style: none;
+          padding: 0;
+          margin: 12px 0 20px;
+        }
+        .audit-page ul li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 8px;
+          color: rgba(232, 232, 240, 0.6);
+          font-size: 0.95rem;
+        }
+        .audit-page ul li::before {
+          content: '▸';
+          position: absolute;
+          left: 0;
+          color: #f97316;
+          font-weight: 700;
+        }
+        .audit-page table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 16px 0 24px;
+          background: #1a1a2e;
+          border-radius: 12px;
+          overflow: hidden;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .audit-page thead {
+          background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(168, 85, 247, 0.15));
+        }
+        .audit-page th {
+          text-align: left;
+          padding: 12px 16px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: #f97316;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .audit-page td {
+          padding: 10px 16px;
+          font-size: 0.85rem;
+          color: rgba(232, 232, 240, 0.6);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .audit-page tr:last-child td { border-bottom: none; }
+        .audit-page tr:hover td { background: rgba(255, 255, 255, 0.02); }
+        .audit-page td strong { color: #e8e8f0; }
+        .audit-section-card {
+          background: #12121a;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 16px;
+          padding: 32px;
+          margin: 24px 0;
+        }
+        .audit-header-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 16px 24px;
+          background: linear-gradient(135deg, #1a1a2e, #12121a);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          margin-bottom: 32px;
+        }
+        .audit-header-bar .audit-logo {
+          font-family: 'Outfit', sans-serif;
+          font-weight: 800;
+          font-size: 1.1rem;
+          background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .audit-badge {
+          display: inline-block;
+          padding: 4px 12px;
+          border-radius: 20px;
+          font-size: 0.7rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          background: rgba(249, 115, 22, 0.12);
+          color: #f97316;
+          border: 1px solid rgba(249, 115, 22, 0.25);
+        }
+      0:{"rsc":["$","$1","c",{"children":[[["$","style",null,{"children":"$2"}],"$L3"],null,"$L4"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"I5iZfnc_RuIYlPzdK0sKq"}
+3:["$","div",null,{"className":"audit-page","children":["$","div",null,{"className":"audit-container","children":[["$","div",null,{"className":"audit-header-bar","children":[["$","span",null,{"className":"audit-logo","children":"Josh Andrews"}],["$","span",null,{"className":"audit-badge","children":"Audit Template"}]]}],["$","h1",null,{"children":"[CLIENT NAME]"}],["$","h1",null,{"className":"audit-subtitle","children":"Q[X] YOY AUDIT"}],["$","hr",null,{}],["$","h1",null,{"children":"OVERVIEW"}],["$","div",null,{"className":"audit-section-card","children":[["$","h2",null,{"children":["$","strong",null,{"children":"[Client Name] Q[X] [Year] Email Performance Summary (YoY)"}]}],["$","p",null,{"children":["This part of the report is for assessing ",["$","strong",null,{"children":"[Client Name]'s"}]," email performance in ",["$","strong",null,{"children":"Q[X] [Year] YoY"}],", measuring revenue contribution, campaign and flow effectiveness, list health, and growth opportunities to guide next-quarter improvements. If there is any context to better support this document, please feel free to jump in at any time."]}]]}],["$","h3",null,{"children":"Total Revenue Impact"}],["$","ul",null,{"children":[["$","li",null,{"children":[["$","strong",null,{"children":"Total revenue:"}]," $[AMOUNT]"]}],["$","li",null,{"children":[["$","strong",null,{"children":"Change vs same period last year:"}]," [+/-]%"]}],["$","li",null,{"children":[["$","strong",null,{"children":"Attributed to email:"}]," $[AMOUNT] — ",["$","strong",null,{"children":"Change vs same period last year:"}]," [+/-]%"]}]]}],["$","h4",null,{"children":"Insight(s):"}],["$","ul",null,{"children":[["$","li",null,{"children":"[Insight about email's share of total revenue]"}],["$","li",null,{"children":"[Insight about campaign vs flow contribution]"}],["$","li",null,{"children":"[Insight about engagement and conversion efficiency]"}]]}],["$","h3",null,{"children":"Message Type Breakdown"}],["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Type"}],["$","th",null,{"children":"Revenue"}],["$","th",null,{"children":"% of Email Revenue"}],["$","th",null,{"children":"Total Recipients"}],["$","th",null,{"children":"YoY Growth"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Campaigns"}],["$","td",null,{"children":"$$[AMOUNT]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[+/-]% revenue [+/-]% recipients"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Flows"}],["$","td",null,{"children":"$$[AMOUNT]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[+/-]% revenue [+/-]% recipients"}]]}]]}]]}],["$","h3",null,{"children":"Performance Metrics – Campaigns vs Flows (Q[X] [Year] YoY)"}],["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Metric"}],["$","th",null,{"children":"Campaign – Email"}],["$","th",null,{"children":"Campaign – SMS"}],["$","th",null,{"children":"Flow – Email"}],["$","th",null,{"children":"Flow – SMS"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"Total Recipients"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Unique Opens"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"–"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"–"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Open Rate"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"–"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"–"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Unique Clicks"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Click Rate"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"[X]% ([+/-]%)"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Unique Conversions"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}],["$","td",null,{"children":"[X] ([+/-]%)"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"Conversion Rate"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"[X]% ([+/-]%)"}],["$","td",null,{"children":"[X]% ([+/-]%)"}]]}],"$L5","$L6","$L7"]}]]}],"$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a","$L2b","$L2c","$L2d"]}]}]
+4:["$","$L2e",null,{"children":["$","$2f",null,{"name":"Next.MetadataOutlet","children":"$@30"}]}]
+5:["$","tr",null,{"children":[["$","td",null,{"children":"Conversion Value"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}]]}]
+6:["$","tr",null,{"children":[["$","td",null,{"children":"Revenue per Recipient"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}]]}]
+7:["$","tr",null,{"children":[["$","td",null,{"children":"Average Order Value"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}],["$","td",null,{"children":"$$[X] ([+/-]%)"}]]}]
+8:["$","h4",null,{"children":"Insight(s):"}]
+9:["$","ul",null,{"children":[["$","li",null,{"children":"[Insight about campaign performance]"}],["$","li",null,{"children":"[Insight about flow performance]"}],["$","li",null,{"children":"[Insight about growth opportunities]"}]]}]
+a:["$","h3",null,{"children":"Email Deliverability & List Health"}]
+b:["$","p",null,{"children":[["$","strong",null,{"children":"Total recipients:"}]," ",["$","strong",null,{"children":"[X]"}]," (",["$","strong",null,{"children":"[+/-]% YoY"}],")"]}]
+c:["$","ul",null,{"children":[["$","li",null,{"children":[["$","strong",null,{"children":"Open rate:"}]," [X]% ([+/-]%)"]}],["$","li",null,{"children":[["$","strong",null,{"children":"Click rate:"}]," [X]% ([+/-]%)"]}],["$","li",null,{"children":[["$","strong",null,{"children":"Bounce rate:"}]," [X]% ([+/-]%)"]}],["$","li",null,{"children":[["$","strong",null,{"children":"Spam complaint rate:"}]," [X]% ([+/-]%)"]}],["$","li",null,{"children":[["$","strong",null,{"children":"Unsubscribe rate:"}]," [X]% ([+/-]%)"]}]]}]
+d:["$","h4",null,{"children":"Insight(s):"}]
+e:["$","ul",null,{"children":[["$","li",null,{"children":"[Insight about deliverability health]"}],["$","li",null,{"children":"[Insight about list hygiene and churn]"}]]}]
+f:["$","h3",null,{"children":"Concluding Remarks"}]
+10:["$","ul",null,{"children":[["$","li",null,{"children":"[Key takeaway about overall performance]"}],["$","li",null,{"children":"[Key takeaway about campaigns vs flows]"}],["$","li",null,{"children":"[Key takeaway about deliverability]"}],["$","li",null,{"children":"[Key takeaway about recommended next steps]"}]]}]
+11:["$","hr",null,{}]
+12:["$","h1",null,{"children":"PERFORMANCE"}]
+13:["$","h3",null,{"children":"Campaign Performance YoY – Q[X] [Year] vs Q[X] [Previous Year]"}]
+14:["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Metric"}],["$","th",null,{"children":"Q[X] [Year]"}],["$","th",null,{"children":"Q[X] [Prev Year]"}],["$","th",null,{"children":"YoY Change"}],["$","th",null,{"children":"% Difference"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"AOV"}]}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[+/-]$[X]"}],["$","td",null,{"children":["$","strong",null,{"children":"[+/-]%"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"Conversion Rate"}]}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"[+/-]%"}],["$","td",null,{"children":["$","strong",null,{"children":"[+/-]%"}]}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"RPR"}]}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[+/-]$[X]"}],["$","td",null,{"children":["$","strong",null,{"children":"[+/-]%"}]}]]}]]}]]}]
+15:["$","p",null,{"children":"[Summary insight about campaign efficiency]"}]
+16:["$","h3",null,{"children":"Top 5 Revenue-Generating Flows Performance YoY"}]
+17:["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Flow Name"}],["$","th",null,{"children":"Quarter"}],["$","th",null,{"children":"AOV"}],["$","th",null,{"children":"Conv Rate"}],["$","th",null,{"children":"RPR"}],["$","th",null,{"children":"YoY Change"}],["$","th",null,{"children":"% Diff"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 1]"}]}],["$","td",null,{"children":"Q[X] [Year]"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[Change]"}],["$","td",null,{"children":"[%]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 2]"}]}],["$","td",null,{"children":"Q[X] [Year]"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[Change]"}],["$","td",null,{"children":"[%]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 3]"}]}],["$","td",null,{"children":"Q[X] [Year]"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[Change]"}],["$","td",null,{"children":"[%]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 4]"}]}],["$","td",null,{"children":"Q[X] [Year]"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[Change]"}],["$","td",null,{"children":"[%]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 5]"}]}],["$","td",null,{"children":"Q[X] [Year]"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[Change]"}],["$","td",null,{"children":"[%]"}]]}]]}]]}]
+18:["$","ul",null,{"children":[["$","li",null,{"children":"[Insight about top flow trends]"}],["$","li",null,{"children":"[Insight about underperforming flows]"}],["$","li",null,{"children":"[Insight about growth opportunities]"}]]}]
+19:["$","hr",null,{}]
+1a:["$","h1",null,{"children":"SIGN UP FORMS"}]
+1b:["$","h3",null,{"children":"Q[X] [Year] [Form Name] [Mobile]"}]
+1c:["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Month"}],["$","th",null,{"children":"Submit Rate"}],["$","th",null,{"children":"Revenue"}],["$","th",null,{"children":"Submits"}],["$","th",null,{"children":"Views"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"[Month 1]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[X]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"[Month 2]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[X]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"[Month 3]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[X]"}]]}]]}]]}]
+1d:["$","ul",null,{"children":[["$","li",null,{"children":"Submit Rate: [+/-]%"}],["$","li",null,{"children":"Revenue: [+/-]$[X]"}],["$","li",null,{"children":"Submits: [+/-][X]"}],["$","li",null,{"children":"Views: [+/-][X]"}]]}]
+1e:["$","h3",null,{"children":"Q[X] [Year] [Form Name] [Desktop]"}]
+1f:["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Month"}],["$","th",null,{"children":"Submit Rate"}],["$","th",null,{"children":"Revenue"}],["$","th",null,{"children":"Submits"}],["$","th",null,{"children":"Views"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":"[Month 1]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[X]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"[Month 2]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[X]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":"[Month 3]"}],["$","td",null,{"children":"[X]%"}],["$","td",null,{"children":"$$[X]"}],["$","td",null,{"children":"[X]"}],["$","td",null,{"children":"[X]"}]]}]]}]]}]
+20:["$","ul",null,{"children":[["$","li",null,{"children":"Submit Rate: [+/-]%"}],["$","li",null,{"children":"Revenue: [+/-]$[X]"}],["$","li",null,{"children":"Submits: [+/-][X]"}],["$","li",null,{"children":"Views: [+/-][X]"}]]}]
+21:["$","h3",null,{"children":"Net New Sign Up Form Suggestions"}]
+22:["$","ul",null,{"children":[["$","li",null,{"children":[["$","strong",null,{"children":"[Form Suggestion 1]:"}]," [Description of who it targets and why]"]}],["$","li",null,{"children":[["$","strong",null,{"children":"[Form Suggestion 2]:"}]," [Description of who it targets and why]"]}],["$","li",null,{"children":[["$","strong",null,{"children":"[Form Suggestion 3]:"}]," [Description of who it targets and why]"]}]]}]
+23:["$","hr",null,{}]
+24:["$","h1",null,{"children":"CAMPAIGNS"}]
+25:["$","ul",null,{"children":[["$","li",null,{"children":"[Campaign recommendation 1]"}],["$","li",null,{"children":"[Campaign recommendation 2]"}],["$","li",null,{"children":"[Additional campaign recommendations as needed]"}]]}]
+26:["$","hr",null,{}]
+27:["$","h1",null,{"children":"FLOWS"}]
+28:["$","table",null,{"children":[["$","thead",null,{"children":["$","tr",null,{"children":[["$","th",null,{"children":"Flow Name"}],["$","th",null,{"children":"Feedback"}]]}]}],["$","tbody",null,{"children":[["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 1]"}]}],["$","td",null,{"children":"[Detailed feedback: what's working, what needs fixing, specific recommendations]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 2]"}]}],["$","td",null,{"children":"[Detailed feedback]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 3]"}]}],["$","td",null,{"children":"[Detailed feedback]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 4]"}]}],["$","td",null,{"children":"[Detailed feedback]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 5]"}]}],["$","td",null,{"children":"[Detailed feedback]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 6]"}]}],["$","td",null,{"children":"[Detailed feedback]"}]]}],["$","tr",null,{"children":[["$","td",null,{"children":["$","strong",null,{"children":"[Flow 7]"}]}],["$","td",null,{"children":"[Detailed feedback]"}]]}]]}]]}]
+29:["$","h4",null,{"children":"Net New Flow Suggestions:"}]
+2a:["$","ul",null,{"children":[["$","li",null,{"children":["$","strong",null,{"children":"[Flow Suggestion 1]"}]}],["$","li",null,{"children":["$","strong",null,{"children":"[Flow Suggestion 2]"}]}],["$","li",null,{"children":["$","strong",null,{"children":"[Flow Suggestion 3]"}]}],["$","li",null,{"children":["$","strong",null,{"children":"[Flow Suggestion 4]"}]}]]}]
+2b:["$","hr",null,{}]
+2c:["$","h1",null,{"children":"SUMMARY"}]
+2d:["$","div",null,{"className":"audit-section-card","children":[["$","h3",null,{"children":"Sign-Up Forms"}],["$","ul",null,{"children":[["$","li",null,{"children":"[Summary action item 1]"}],["$","li",null,{"children":"[Summary action item 2]"}],["$","li",null,{"children":"[Summary action item 3]"}]]}],["$","h3",null,{"children":"Campaigns"}],["$","ul",null,{"children":[["$","li",null,{"children":"[Summary action item 1]"}],["$","li",null,{"children":"[Summary action item 2]"}]]}],["$","h3",null,{"children":"Flows"}],["$","ul",null,{"children":[["$","li",null,{"children":"[Summary action item 1]"}],["$","li",null,{"children":"[Summary action item 2]"}],["$","li",null,{"children":"[Summary action item 3]"}],["$","li",null,{"children":"[Summary action item 4]"}],["$","li",null,{"children":"[Summary action item 5]"}],["$","li",null,{"children":"[Additional action items as needed]"}]]}]]}]
+30:null

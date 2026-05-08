@@ -1,0 +1,282 @@
+1:"$Sreact.fragment"
+7:I[97367,["/_next/static/chunks/0dbhjjzl8qfwv.js"],"OutletBoundary"]
+8:"$Sreact.suspense"
+2:T1569,
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap');
+
+  .company-page {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #07070d;
+    color: #eaeaf4;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  .company-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .company-logo {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #eaeaf4;
+    text-decoration: none;
+  }
+
+  .company-nav-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .company-nav-links a {
+    color: rgba(234, 234, 244, 0.6);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .company-nav-links a:hover {
+    color: #eaeaf4;
+  }
+
+  .company-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+  }
+
+  .company-hero {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .company-eyebrow {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+    border: 1px solid rgba(249, 115, 22, 0.25);
+    margin-bottom: 24px;
+  }
+
+  .company-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .company-gradient {
+    background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .company-subtitle {
+    font-size: 1.05rem;
+    color: rgba(234, 234, 244, 0.55);
+  }
+
+  /* ── Square Video ── */
+  .company-video-section {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .company-video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    background: #000;
+    box-shadow: 0 8px 48px rgba(0, 0, 0, 0.5);
+  }
+
+  .company-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ── CTA ── */
+  .company-cta-section {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .company-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .company-cta-primary {
+    background: linear-gradient(135deg, #f97316, #ec4899, #a855f7);
+    color: white;
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
+  }
+
+  .company-cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(249, 115, 22, 0.45);
+  }
+
+  /* ── Highlights ── */
+  .company-highlights {
+    margin-bottom: 48px;
+  }
+
+  .company-highlights h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .company-highlights-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .company-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #0e0e18;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: all 0.25s ease;
+  }
+
+  .company-highlight-item:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    transform: translateX(4px);
+  }
+
+  .company-highlight-number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f97316, #ec4899);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: white;
+  }
+
+  .company-highlight-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(234, 234, 244, 0.7);
+  }
+
+  .company-intro-section {
+    margin-bottom: 48px;
+  }
+
+  .company-intro-card {
+    background: #0e0e18;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 32px;
+  }
+
+  .company-intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(234, 234, 244, 0.7);
+    margin: 0;
+  }
+
+  .company-footer {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .company-footer p {
+    font-size: 0.8rem;
+    color: rgba(234, 234, 244, 0.3);
+    margin: 0;
+  }
+
+  .company-not-found {
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .company-not-found h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .company-not-found p {
+    color: rgba(234, 234, 244, 0.55);
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .company-title {
+      font-size: 1.8rem;
+    }
+
+    .company-container {
+      padding: 24px 16px;
+    }
+
+    .company-nav {
+      padding: 12px 16px;
+    }
+
+    .company-nav-links {
+      display: none;
+    }
+
+    .company-video-wrapper {
+      max-width: 100%;
+    }
+  }
+0:{"rsc":["$","$1","c",{"children":[[["$","style",null,{"children":"$2"}],"$L3","$L4","$L5"],null,"$L6"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"I5iZfnc_RuIYlPzdK0sKq"}
+3:["$","meta",null,{"name":"view-track","content":""}]
+4:["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n(function() {\n  var endpoint = document.querySelector('meta[name=\"view-track\"]');\n  if (endpoint && endpoint.content) {\n    var path = window.location.pathname;\n    fetch(endpoint.content + '?path=' + encodeURIComponent(path) + '&r=' + encodeURIComponent(document.referrer), {\n      method: 'GET',\n      mode: 'no-cors'\n    }).catch(function() {});\n  }\n})();\n"}}]
+5:["$","div",null,{"className":"company-page","children":[["$","nav",null,{"className":"company-nav","children":[["$","a",null,{"href":"/","className":"company-logo","children":"Josh Andrews"}],["$","div",null,{"className":"company-nav-links","children":[["$","a",null,{"href":"/#skills","children":"Skills"}],["$","a",null,{"href":"/#achievements","children":"Achievements"}],["$","a",null,{"href":"/#testimonials","children":"Testimonials"}],["$","a",null,{"href":"/#case-studies","children":"Case Studies"}]]}]]}],["$","div",null,{"className":"company-container","children":[["$","header",null,{"className":"company-hero","children":[["$","div",null,{"className":"company-eyebrow","children":"LOOKING FOR AN EMAIL MARKETER?"}],["$","h1",null,{"className":"company-title","children":["A Personal Message for"," ",["$","span",null,{"className":"company-gradient","children":"Glossier"}]]}],["$","p",null,{"className":"company-subtitle","children":["Email Marketing Manager"," • Personalized for you"]}]]}],["$","section",null,{"className":"company-video-section","children":["$","div",null,{"className":"company-video-wrapper","children":["$","video",null,{"src":"https://sonata-josh.s3.amazonaws.com/videos/glossier-test.webm","controls":true,"playsInline":true,"preload":"metadata","className":"company-video","children":"Your browser does not support the video tag."}]}]}],["$","section",null,{"className":"company-cta-section","children":["$","a",null,{"href":"/","className":"company-cta-btn company-cta-primary","children":"Let's Chat →"}]}],["$","section",null,{"className":"company-highlights","children":[["$","h2",null,{"children":"What I Bring to the Table"}],["$","div",null,{"className":"company-highlights-grid","children":[["$","div","0",{"className":"company-highlight-item","children":[["$","div",null,{"className":"company-highlight-number","children":1}],["$","p",null,{"children":"Lifecycle marketing specialist with hands-on Klaviyo expertise"}]]}],["$","div","1",{"className":"company-highlight-item","children":[["$","div",null,{"className":"company-highlight-number","children":2}],["$","p",null,{"children":"Proven email campaigns driving measurable revenue growth"}]]}],["$","div","2",{"className":"company-highlight-item","children":[["$","div",null,{"className":"company-highlight-number","children":3}],["$","p",null,{"children":"Strategic approach to retention, engagement, and brand storytelling"}]]}]]}]]}],["$","section",null,{"className":"company-intro-section","children":["$","div",null,{"className":"company-intro-card","children":["$","p",null,{"children":"Hi Glossier team — I created this page specifically for you. I've been following your brand and I'd love to bring my email marketing expertise to your team."}]}]}],["$","footer",null,{"className":"company-footer","children":["$","p",null,{"children":["© ",2026," Josh Andrews. This page was created specifically for ","Glossier","."]}]}]]}]]}]
+6:["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]
+9:null
