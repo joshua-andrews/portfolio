@@ -119,10 +119,10 @@ const badges = [
     year: "2024",
   },
   {
-    Logo: LurnSVG,
-    title: <>FB ACADEMY<br />CERTIFICATION</>,
-    ribbon: "LURN",
-    year: "2020",
+    Logo: UdemySVG,
+    title: <>GOOGLE ADS<br />TRAINING</>,
+    ribbon: "UDEMY",
+    year: "2021",
   },
   {
     Logo: UdemySVG,
@@ -131,10 +131,10 @@ const badges = [
     year: "2021",
   },
   {
-    Logo: UdemySVG,
-    title: <>GOOGLE ADS<br />TRAINING</>,
-    ribbon: "UDEMY",
-    year: "2021",
+    Logo: LurnSVG,
+    title: <>FB ACADEMY<br />CERTIFICATION</>,
+    ribbon: "LURN",
+    year: "2020",
   },
   {
     Logo: McMasterLogo,
