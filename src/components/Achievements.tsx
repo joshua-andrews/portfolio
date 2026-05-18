@@ -62,6 +62,24 @@ function MohawkLogo() {
   );
 }
 
+/* ── Udemy SVG ── */
+function UdemySVG() {
+  return (
+    <svg viewBox="0 0 24 24" fill="#a435f0" style={{ width: 32, height: 32 }}>
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c-2.48 0-4.5-2.02-4.5-4.5v-4h2v4c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5v-4h2v4c0 2.48-2.02 4.5-4.5 4.5z" fill="#a435f0" />
+    </svg>
+  );
+}
+
+/* ── Lurn SVG ── */
+function LurnSVG() {
+  return (
+    <svg viewBox="0 0 24 24" fill="#fbb03b" style={{ width: 32, height: 32 }}>
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fbb03b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </svg>
+  );
+}
+
 /* ── Badge Data ── */
 const badges = [
   {
@@ -99,6 +117,24 @@ const badges = [
     title: <>TOP<br />RATED</>,
     ribbon: "UPWORK",
     year: "2024",
+  },
+  {
+    Logo: LurnSVG,
+    title: <>FB ACADEMY<br />CERTIFICATION</>,
+    ribbon: "LURN",
+    year: "2020",
+  },
+  {
+    Logo: UdemySVG,
+    title: <>RETARGETING ADS<br />CERTIFICATION</>,
+    ribbon: "UDEMY",
+    year: "2021",
+  },
+  {
+    Logo: UdemySVG,
+    title: <>GOOGLE ADS<br />TRAINING</>,
+    ribbon: "UDEMY",
+    year: "2021",
   },
   {
     Logo: McMasterLogo,
