@@ -66,19 +66,25 @@ function MohawkLogo() {
 const badges = [
   {
     Logo: KlaviyoSVG,
-    title: <>PRODUCT<br />CERTIFICATE</>,
+    title: <>PRACTITIONER<br />CERTIFICATE</>,
     ribbon: "KLAVIYO",
     year: "2026",
   },
   {
     Logo: KlaviyoSVG,
-    title: <>PRODUCT<br />DELIVERABILITY</>,
+    title: <>DELIVERABILITY<br />CERTIFICATE</>,
     ribbon: "KLAVIYO",
     year: "2026",
   },
   {
     Logo: KlaviyoSVG,
-    title: <>DEVELOPER<br />CERTIFICATE</>,
+    title: <>STRATEGIST<br />CERTIFICATE</>,
+    ribbon: "KLAVIYO",
+    year: "2026",
+  },
+  {
+    Logo: KlaviyoSVG,
+    title: <>DIGITAL MARKETING<br />CERTIFICATE</>,
     ribbon: "KLAVIYO",
     year: "2026",
   },
@@ -86,7 +92,7 @@ const badges = [
     Logo: UpworkSVG,
     title: <>100% JOB<br />SUCCESS SCORE</>,
     ribbon: "UPWORK",
-    year: "2026",
+    year: "2024",
   },
   {
     Logo: UpworkSVG,
