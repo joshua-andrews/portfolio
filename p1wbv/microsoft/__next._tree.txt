@@ -11,4 +11,4 @@
 :HL["https://publishingservices.com/cdn/shop/files/PS_final_gold-2_200x.png?v=1673438297","image"]
 :HL["https://copyculture.io/assets/logo-final.png","image"]
 :HL["/logos/lionmarketing.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"shortId","param":{"type":"d","key":"p1wbv","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"company","param":{"type":"d","key":"microsoft","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"Xj1UAP4SJ-_z59stYeIzd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"shortId","param":{"type":"d","key":"p1wbv","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"company","param":{"type":"d","key":"microsoft","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"nzr-UmjZzbSdEhGsmBLe5"}
