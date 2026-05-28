@@ -194,7 +194,7 @@ export default async function CompanyPage({
           )}
 
           <a
-            href="https://joshandrewz.com"
+            href="https://www.linkedin.com/in/josh-andrews/"
             className="btn-gradient"
           >
             Let&apos;s Chat
