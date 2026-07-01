@@ -143,7 +143,7 @@ export default async function CompanyPage({
             <span className="hero-metric-divider"> | </span>
             <span className="hero-metric">$1.5M+ Generated</span>
             <span className="hero-metric-divider"> | </span>
-            <span className="hero-metric">500K+ Subscribers Managed</span>
+            <span className="hero-metric">1.2M+ Subscribers Managed</span>
           </p>
 
           {/* Mobile stats */}
@@ -164,7 +164,7 @@ export default async function CompanyPage({
               <span className="hero-check-circle">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
               </span>
-              <span>500K+ Subscribers Managed</span>
+              <span>1.2M+ Subscribers Managed</span>
             </span>
           </p>
 
